@@ -74,20 +74,20 @@ body {
 /*Condition*/
 @media (max-width: 600px) {
     #header_bar{
-        display:inline-block;
+        display:flex;
     }
 
     .header-nav{
-        float: left;
-        margin-top: -5rem;
-        margin-left: 50dvh;
+        display: inline-block;
+        margin-bottom: 90px;
+        
         font-size: clamp(0.5rem, 0.1vw + 0.9rem, 1rem);
         transition: all 0.7s;
     }
     .header-nav-b{
-        display: inline-block;
+        height: 90px;
         width: auto;
-        margin-top: 4px;
+        margin-bottom: 20px;
     }
    
 }
@@ -95,18 +95,18 @@ body {
 @keyframes navhover {
     0% {
         scale:1svw 1svw;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 5%;
-        padding-bottom: 5%;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        padding-top: 10%;
+        padding-bottom: 10%;
         color: transparent;
     }
     100% {
         scale:3svw 3svw;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        padding-top: 5%;
-        padding-bottom: 5%;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        padding-top: 2%;
+        padding-bottom: 2%;
         color: black;
     }
 }
