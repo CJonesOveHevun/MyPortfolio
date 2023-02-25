@@ -24,7 +24,7 @@ body {
     width: 100dvw;
     padding-left: 4rem;
     padding-bottom: 5px;
-    margin: 1;
+    margin: 0;
     animation: 0.5s 1 ease-out showheader;
 }
 
@@ -86,26 +86,24 @@ body {
 @media (max-width: 600px) {
     #header_bar{
         top: 0%;
-        display: block;
+        display:grid;
     }
     .header-nav{
         float: left;
-        margin-left: -5rem;
-        margin-top: 2rem;
+        margin-left: -6rem;
+        margin-top: -7.5rem;
         font-size: clamp(0.1rem, 0.1vw + 0.9rem, 1rem);
         transition: all 0.7s;
     }
     .header-nav-b{
-        display: block;
+        display: inline-block;
         width: auto;
-        height: 30px;
+        height: 20px;
     }
     .header-nav-mob{
-        display: block;
-        scale: 3.5 3.5;
-        height: 2.5rem;
-        width: 2.5rem;
-
+        display: flex;
+        scale: 4 4;
+        margin-left: calc(100dvw - 120px);
     }
     #check:checked ~ .header-nav {
         transition: all 0.7s;
