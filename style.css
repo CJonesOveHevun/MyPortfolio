@@ -62,10 +62,6 @@ body {
     background-color: transparent;
 }
 
-#check {
-   display: none;
-}
-
 .header-nav-b:hover{
     transition: all, 0.3s ease 0s;
     animation: 0.3s 1 ease-out forwards navhover;
@@ -75,41 +71,25 @@ body {
     border-radius: 30px;
 }
 
-.header-nav-mob{
-    margin-right: 50px;
-    line-height: 80px;
-    cursor: pointer;
-    display:  none;
-}
-
 /*Condition*/
 @media (max-width: 600px) {
     #header_bar{
-        top: 0%;
-        display:grid;
+        display:inline-block;
     }
+
     .header-nav{
         float: left;
-        margin-left: -6rem;
-        margin-top: -7.5rem;
-        font-size: clamp(0.1rem, 0.1vw + 0.9rem, 1rem);
+        margin-top: -5rem;
+        margin-left: 50dvh;
+        font-size: clamp(0.5rem, 0.1vw + 0.9rem, 1rem);
         transition: all 0.7s;
     }
     .header-nav-b{
         display: inline-block;
         width: auto;
-        height: 20px;
+        margin-top: 4px;
     }
-    .header-nav-mob{
-        display: flex;
-        scale: 4 4;
-        margin-left: calc(100dvw - 120px);
-    }
-    #check:checked ~ .header-nav {
-        transition: all 0.7s;
-        margin-left: calc(-30rem + 1vw);
-    }
-
+   
 }
 
 @keyframes navhover {
