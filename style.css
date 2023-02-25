@@ -80,6 +80,7 @@ body {
     .header-nav{
         display:grid;
         margin-top: 25px;
+        margin-right: 100svw;
        
         
         font-size: clamp(0.5rem, 0.1vw + 0.9rem, 1rem);
@@ -87,7 +88,7 @@ body {
     }
     .header-nav-b{
         width: auto;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
    
 }
@@ -104,7 +105,7 @@ body {
     100% {
         scale:3svw 3svw;
         padding-left: .5rem;
-        padding-right: .5rem;
+        padding-right: 5rem;
         padding-top: 2%;
         padding-bottom: 2%;
         color: black;
