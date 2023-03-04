@@ -29,6 +29,7 @@ body {
 }
 
 #header_bar h1{
+    pointer-events: none;
     font-size: clamp(1rem,1rem + 4svw, 4rem);
 }
 
@@ -115,6 +116,7 @@ body {
 
 
 .home-title{
+    cursor: default;
     transition: all, 2.0s ease-out 1s;
     text-align: center;
     text-shadow: 1px black;
