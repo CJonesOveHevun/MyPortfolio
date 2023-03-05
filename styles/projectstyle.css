@@ -80,6 +80,7 @@ body {
 
 
 .div-headers {
+    pointer-events: none;
     text-align: center;
     font-size: 1.5rem;
     animation: box-anim 2.5s forwards ease-out;
@@ -135,10 +136,12 @@ body {
     text-decoration: none;
 }
 .box-project h2{
+    pointer-events: none;
    font-size: 1.5rem;
 }
 
 .box-project p {
+    pointer-events: none;
     font-size: .7rem;
 }
 .box-project hr{
