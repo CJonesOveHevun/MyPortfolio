@@ -112,7 +112,7 @@ body {
     border: none;
 }
 .homepage-p{
-    font-size: 70px;
+    font-size: 60px;
     transition: all 2.5s;
 }
 
@@ -126,6 +126,7 @@ body {
     align-self: center;
     color: rgb(150, 175, 185);
     transition:all 1s;
+    text-wrap: wrap;
 }
 #ARTS:hover, #PROJECTS:hover, #ABOUT:hover{
     background-color: rgb(25, 27, 34);
@@ -178,9 +179,38 @@ body {
     transition: all 2.0s;
     position: relative;
 }
-@media (width:400px){
+@media (max-width:850px) {
     #GALLERY-body{
         display: block;
         padding: 1px;
+        margin: 0%;
+        padding: 10px;
+    }
+    #GALLERY-body img{
+        width:300px;
+    }
+    #homepage-body h2{
+        font-size: 20px;
+    }
+    .homepage-p {
+        font-size: 50px;
+        padding-top: 80px;
+    }
+    #homepage-a a{
+        padding: 30px 70px;
+    }
+    #homepage-a a:hover{
+        padding: 60px 120px;
+    }
+
+    #homepage-a{
+        display: block;
+        justify-content: left;
+    }
+    #ARTS, #PROJECTS, #ABOUT{
+        font-size: 12px;
+    }
+    #nav-head h1{
+        display: none;
     }
 }
