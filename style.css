@@ -1,243 +1,186 @@
-head {
-    background-color: black;
+*{
+    --accent_color: rgb(99, 114, 197);
+    --nav-color:rgb(12, 13, 20);
+    --homepage-color:rgb(15, 15, 29);
+    margin: 0%;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
 
 body {
-   margin: 0;
-   background-color: rgb(0, 0, 0);
-   font-family:'Poppins', sans-serif;
+    background-color: rgb(12, 13, 17);
 }
 
-#header_bar {
-    display: flex;
-    float: right;
-    justify-content:space-between;
-    
-    position:fixed;
-    top:0px;
-    color: azure;
-    font-size: 1rem;
-
-    background:linear-gradient(to bottom, rgba(6, 0, 14, 0.7) 39%, transparent);
+#nav-head{
+    padding: 0px 50px;
+    background-color: var(--nav-color);
+    color: var(--accent_color);
+    display: inline-flex;
     width: 100dvw;
-    padding-left: 4rem;
-    padding-bottom: 5px;
-    margin: 0;
-    animation: 0.5s 1 ease-out showheader;
-}
-
-#header_bar h1{
-    pointer-events: none;
-    font-size: clamp(1rem,1rem + 4svw, 4rem);
-}
-
-@keyframes showheader {
-    0%{
-        color: transparent;
-    }
-    100%{
-        color: white;
-    }
-}
-
-.header-nav {
-    text-transform: uppercase;
     float: right;
-    margin-top: 3rem;;
-    margin-right: calc(2vw + 8rem);
-    list-style: none;
-    width: fit-content;
-    font-size: clamp(0.2rem, 0.1vw + 0.8rem, 1rem);
-
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    box-shadow: 1px 0px 24px 4px rgba(4, 11, 12, 0.295);
+    top: 0%;
+    pointer-events: none;
+}
+#nav-head h1{
+    pointer-events: none;
 }
 
-
-.header-nav-b{
-    transition: all, 0.1s ease-in 0s;
+#nav-head a {
+    float: right;
+    width:100px;
+    padding: 30px 0px;
+    text-align: center;
+    transition: all 0.32s;
+    color: var(--accent_color);
+    pointer-events: visible;
+}
+#contact {
+    margin-right: 100px;
     text-decoration: none;
+}
+
+#nav-head a:hover{
+    background-color: var(--accent_color);
+    color: var(--nav-color);
+}
+
+#nav-list{
+    justify-content: center;
+    display: flex;
+    text-transform: capitalize;
+}
+.list-link{
+    list-style: none;
+    text-align: center;
+    
+}
+.list-link a{
+    text-decoration: none;
+    text-align: center;
+}
+#homepage-body{
+    text-align: start;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--homepage-color);
+    pointer-events: none;
+    outline: solid 10px;
+    outline-color: var(--nav-color);
+    
+}
+#homepage-body div {
+    padding: 0px 90px;
+    transform: translateY(200px);
+}
+#homepage-body h1{
+    margin-left: 50px;
+    font-size: 90px;
+    pointer-events: none;
+    color: var(--accent_color);
+}
+#homepage-body h2,#homepage-body p{
+    pointer-events: none;
     color: white;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    background-color: transparent;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
-.header-nav-b:hover{
-    transition: all, 0.3s ease 0s;
-    animation: 0.3s 1 ease-out forwards navhover;
-    background-color: white;
-    
-
-    border-radius: 30px;
+#homepage-a{
+    display: flex;
+    justify-content: space-between;
+    color:var(accent_color);
+}
+#homepage-a a{
+    pointer-events: visible;
+    background-color: rgba(15, 15, 29, 0);
+    padding: 30px 100px;
+    font-size: 20px;
+    color:var(--homepage-color);
+    border: none;
+    transition: all 0.3s;
 }
 
-/*Condition*/
-@media (max-width: 600px) {
-    #header_bar{
-        display:flex;
-    }
-
-    .header-nav{
-        display:grid;
-        margin-top: 25px;
-        margin-right: 100svw;
-       
-        
-        font-size: clamp(0.5rem, 0.1vw + 0.9rem, 1rem);
-        transition: all 0.7s;
-    }
-    .header-nav-b{
-        width: auto;
-        margin-bottom: 15px;
-    }
-   
+#homepage-a a:hover{
+    pointer-events: visible;
+    background-color: var(--accent_color);
+    padding: 80px 180px;
+    color:var(--homepage-color);
+    border: none;
+}
+.homepage-p{
+    font-size: 70px;
+    transition: all 2.5s;
 }
 
-@keyframes navhover {
-    0% {
-        scale:1svw 1svw;
-        padding-left: .5rem;
-        padding-right: .5rem;
-        padding-top: 10%;
-        padding-bottom: 10%;
-        color: transparent;
-    }
-    100% {
-        scale:3svw 3svw;
-        padding-left: .5rem;
-        padding-right: .5rem;
-        padding-top: 2%;
-        padding-bottom: 2%;
-        color: black;
-    }
-}
-
-
-
-.home-title{
-    cursor: default;
-    transition: all, 2.0s ease-out 1s;
-    text-align: center;
-    text-shadow: 1px black;
-    margin: 0%;
-    
-    animation: 2s 1 ease-in forwards slidein;
-    font-size: clamp(1rem, 4vw + 1rem, 8rem);
-}
-
-@keyframes slidein {
-   0%{
-    color: transparent;
-   }
-   100%{
-    color:white;
-   }
-}
-
-.home-title:hover{
-    transition: all, 0.3s ease-out 1s;
-    animation: 0.5s 1 ease-out forwards slideout;
-}
-@keyframes slideout{
-    0%{
-        color:white;
-        margin-left: 0%;
-    }
-    50%{
-        color:transparent;
-    }
-    99%{
-        color:transparent;
-        margin-left: 10%;
-    }
-    100%{
-        color:transparent;
-        margin-left: auto;
-    }
-}
-
-
-.wraper{
-    animation: 2.1s 1 ease-out forwards easetitle;
-}
-@keyframes easetitle{
-    0%{
-        margin-top: 100%;
-    }
-    99%{
-        margin-top:0%
-    }
-    100%{
-       margin-top: auto;
-    }
-}
-
-#bg {
-    align-content: center;
-    position: relative;
-    background-position: center;
+#ARTS, #PROJECTS, #ABOUT{
+    margin: 0px 0px;
+    padding-top: 100px;
+    padding-bottom: 50px;
     width: 100%;
-    display: grid;
-    animation: 2s 1 ease-out forwards loadbg;
+    height: fit-content;
+    align-items: center;
+    align-self: center;
+    color: rgb(150, 175, 185);
+    transition:all 1s;
 }
-@keyframes loadbg {
-    0% {
-        scale: 1 0.5;
-        height: 0rem;
-        translate: 0 1;
-        background-image:linear-gradient(
-        to bottom ,black , transparent, black 80%), url(img/bg2.png);
-    }
-    100% {
-        scale: 1 1;
-        height: 50rem;
-        translate: 0 5;
-        background-image:linear-gradient(
-        to bottom ,black , transparent, black 90%), url(img/bg2.png);
-    }
+#ARTS:hover, #PROJECTS:hover, #ABOUT:hover{
+    background-color: rgb(25, 27, 34);
+    box-shadow: inset 1px 0px 24px 4px rgb(30, 28, 39);
+}
+#ARTS-overflow{
+    height: 500px;
+    justify-content: space-between;
+    padding: 90px;
+    display: inline-block;
+    overflow: scroll;
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+#ARTS-overflow img{
+    object-fit: cover;
+    pointer-events: none;
+    margin: 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 1px 0px 64px 4px rgb(16, 16, 24);
 }
 
-.para {
+#ABOUT h2{
+    color:var(--accent_color);
+}
+
+.content-a h1 {
+    padding-left: 20px;
+    margin-left: 90px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.content-a h2,.content-a p{
+    padding-left: 20px;
+    margin-left: 120px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#GALLERY-body{
+    display: flexbox;
+    padding: 30px;
+    margin: 50px;
+    background-color: var(--homepage-color);
+}
+#GALLERY-body img{
+    border-radius: 20px;
+    padding: 1px;
+    object-fit: cover;
+    transition: all 2.0s;
     position: relative;
-    text-align: center;
-
-
-    margin: 5%;
-    padding: 1rem + 0.1svw;
-
-    font-size: 1.2em;
-    color:white;
-    animation: 4s 1 ease-out showpara;
-    line-height: 2rem;
-
 }
-@keyframes showpara {
-    0% {
-        color:transparent;
+@media (width:400px){
+    #GALLERY-body{
+        display: block;
+        padding: 1px;
     }
-    50%{
-        color:transparent;
-    }
-    100% {
-        color:white;
-    }
-}
-
-.para-intro{ 
-    position:relative;
-    text-align: center;
-
-
-    margin-left: auto;
-    margin-right: auto;
-
-    margin-top: 10rem;
-    margin-bottom: 5rem;
-
-    width: 100%;
-    font-size: clamp(2rem, 8vw + 1rem ,3rem);
-
-    color:white;
-
 }
