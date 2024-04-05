@@ -228,8 +228,29 @@ body {
     #nav-head{
         padding: 0px;
     }
+    #nav-list{
+        padding: 0px;
+        font-size: 12px;
+    }
     #homepage-body div {
-        padding: 0px 90px;
+        padding: 0px 30px;
         transform: translateY(100px);
+    }
+    #homepage-body h1{
+        font-size: 60px;
+    }
+    #homepage-body h2{
+        font-size: 20px;
+    }
+    #contact{
+        margin-right: 10px;
+    }
+    #ARTS-overflow{
+        padding: 80px;
+    }
+    #ARTS-overflow img{
+        width: 200px;
+        height: 200px;
+        margin:0px;
     }
 }
