@@ -171,9 +171,9 @@ body {
 }
 #ARTS-overflow{
     height: 500px;
-    justify-content: space-between;
+    justify-content: center;
     padding: 90px;
-    display: inline-block;
+    display: flex;
     overflow: scroll;
     overflow-y: auto;
     overflow-x:hidden;
@@ -204,7 +204,9 @@ body {
 }
 
 #GALLERY-body{
-    display: flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     padding: 30px;
     margin: 50px;
     background-color: var(--homepage-color);
